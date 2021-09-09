@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/navigation_templets">
+
+    <fragment
+        android:id="@+id/navigation_templets"
+        android:label="Home"
+        android:name="com.engahmedegypto.task1.Fragments.TempletsFragment"
+        tools:layout="@layout/fragment_templets" />
+
+    <fragment
+        android:id="@+id/navigation_create_new"
+        android:label="Create New"
+        android:name="com.engahmedegypto.task1.Fragments.CreateNew"
+        tools:layout="@layout/fragment_create_new" />
+
+    <fragment
+        android:id="@+id/navigation_saved"
+        android:label="Saved"
+        android:name="com.engahmedegypto.task1.Fragments.Saved"
+        tools:layout="@layout/fragment_saved" />
+
+
+
+
+
+</navigation>

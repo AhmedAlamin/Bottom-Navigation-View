@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_templets"
+        android:icon="@drawable/templets"
+        android:title="Templets" />
+
+    <item
+        android:id="@+id/navigation_create_new"
+        android:icon="@drawable/create_new"
+        android:title="Create New" />
+
+    <item
+        android:id="@+id/navigation_saved"
+        android:icon="@drawable/saved"
+        android:title="Saved"
+        />
+
+
+</menu>
