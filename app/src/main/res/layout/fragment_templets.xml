@@ -62,16 +62,18 @@
 
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/all"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="All"
                         android:backgroundTint="#377cff"
                         android:background="@drawable/bg"
-                        android:textColor="#f3f6ff"
-                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:layout_margin="5dp"
                         />
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/logo"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textColor="#868587"
@@ -139,11 +141,12 @@
             >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
 
                 <LinearLayout
+                    android:id="@+id/neon_templets1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -295,9 +298,11 @@
 
 
                 <LinearLayout
+                    android:id="@+id/logo_templets"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:layout_gravity="center"
                     android:orientation="vertical">
 
 
@@ -312,328 +317,344 @@
                         android:textSize="16sp"/>
 
 
-                    <GridLayout
-                        android:id="@+id/GridLayout2"
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:columnCount="5"
-                        android:rowCount="2"
-                        android:layout_margin="10dp"
-                        android:padding="10dp"
-                        android:orientation="horizontal"
-                        tools:context=".GridXMLActivity" >
+                        android:orientation="vertical"
+                        tools:listitem="@layout/item_layout"
+                        android:paddingEnd="25dp"
+                        android:paddingStart="25dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        />
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="5dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="center"
-                            >
+<!--                    <GridLayout-->
+<!--                        android:id="@+id/GridLayout2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:columnCount="4"-->
+<!--                        android:rowCount="2"-->
+<!--                        android:layout_margin="10dp"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        tools:context=".GridXMLActivity" >-->
 
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/star"
-                                app:layout_constraintBottom_toBottomOf="@id/circle2"
-                                app:layout_constraintEnd_toEndOf="@id/circle2"
-                                app:layout_constraintLeft_toRightOf="@id/circle2"
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            >-->
 
-                                />
+<!--                            <ImageView-->
+<!--                                android:layout_width="20dp"-->
+<!--                                android:layout_height="20dp"-->
+<!--                                android:src="@drawable/star"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/circle2"-->
+<!--                                app:layout_constraintEnd_toEndOf="@id/circle2"-->
+<!--                                app:layout_constraintLeft_toRightOf="@id/circle2"-->
 
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/circle2"
-                                android:layout_width="56dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/imm"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+<!--                                />-->
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                android:id="@+id/circle2"-->
+<!--                                android:layout_width="56dp"-->
+<!--                                android:layout_height="56dp"-->
+<!--                                android:src="@drawable/imm"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="center"
-                            android:layout_marginEnd="5dp"
-                            >
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/star"
-                                app:layout_constraintBottom_toBottomOf="@id/circle3"
-                                app:layout_constraintEnd_toEndOf="@id/circle3"
-                                app:layout_constraintLeft_toRightOf="@id/circle3"
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            >-->
 
-                                />
+<!--                            <ImageView-->
+<!--                                android:layout_width="20dp"-->
+<!--                                android:layout_height="20dp"-->
+<!--                                android:src="@drawable/star"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/circle3"-->
+<!--                                app:layout_constraintEnd_toEndOf="@id/circle3"-->
+<!--                                app:layout_constraintLeft_toRightOf="@id/circle3"-->
 
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/circle3"
-                                android:layout_width="56dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/imm"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+<!--                                />-->
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                android:id="@+id/circle3"-->
+<!--                                android:layout_width="56dp"-->
+<!--                                android:layout_height="56dp"-->
+<!--                                android:src="@drawable/imm"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="5dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="center"
-                            >
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/star"
-                                app:layout_constraintBottom_toBottomOf="@id/circle4"
-                                app:layout_constraintEnd_toEndOf="@id/circle4"
-                                app:layout_constraintLeft_toRightOf="@id/circle4"
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            >-->
 
-                                />
+<!--                            <ImageView-->
+<!--                                android:layout_width="20dp"-->
+<!--                                android:layout_height="20dp"-->
+<!--                                android:src="@drawable/star"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/circle4"-->
+<!--                                app:layout_constraintEnd_toEndOf="@id/circle4"-->
+<!--                                app:layout_constraintLeft_toRightOf="@id/circle4"-->
 
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/circle4"
-                                android:layout_width="56dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/imm"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+<!--                                />-->
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                android:id="@+id/circle4"-->
+<!--                                android:layout_width="56dp"-->
+<!--                                android:layout_height="56dp"-->
+<!--                                android:src="@drawable/imm"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="5dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="center"
-                            >
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/star"
-                                app:layout_constraintBottom_toBottomOf="@id/circle5"
-                                app:layout_constraintEnd_toEndOf="@id/circle5"
-                                app:layout_constraintLeft_toRightOf="@id/circle5"
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            >-->
 
-                                />
+<!--                            <ImageView-->
+<!--                                android:layout_width="20dp"-->
+<!--                                android:layout_height="20dp"-->
+<!--                                android:src="@drawable/star"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/circle5"-->
+<!--                                app:layout_constraintEnd_toEndOf="@id/circle5"-->
+<!--                                app:layout_constraintLeft_toRightOf="@id/circle5"-->
 
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/circle5"
-                                android:layout_width="56dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/imm"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+<!--                                />-->
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                android:id="@+id/circle5"-->
+<!--                                android:layout_width="56dp"-->
+<!--                                android:layout_height="56dp"-->
+<!--                                android:src="@drawable/imm"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="5dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="center"
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-                            >
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:layout_gravity="center"-->
 
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/star"
-                                app:layout_constraintBottom_toBottomOf="@id/circle6"
-                                app:layout_constraintEnd_toEndOf="@id/circle6"
-                                app:layout_constraintLeft_toRightOf="@id/circle6"
+<!--                            >-->
 
-                                />
+<!--                            <ImageView-->
+<!--                                android:layout_width="20dp"-->
+<!--                                android:layout_height="20dp"-->
+<!--                                android:src="@drawable/star"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/circle6"-->
+<!--                                app:layout_constraintEnd_toEndOf="@id/circle6"-->
+<!--                                app:layout_constraintLeft_toRightOf="@id/circle6"-->
 
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/circle6"
-                                android:layout_width="56dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/imm"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+<!--                                />-->
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                android:id="@+id/circle6"-->
+<!--                                android:layout_width="56dp"-->
+<!--                                android:layout_height="56dp"-->
+<!--                                android:src="@drawable/imm"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="center"                           >
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/star"
-                                app:layout_constraintBottom_toBottomOf="@id/circle7"
-                                app:layout_constraintEnd_toEndOf="@id/circle7"
-                                app:layout_constraintLeft_toRightOf="@id/circle7"
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:layout_gravity="center"                           >-->
 
-                                />
+<!--                            <ImageView-->
+<!--                                android:layout_width="20dp"-->
+<!--                                android:layout_height="20dp"-->
+<!--                                android:src="@drawable/star"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/circle7"-->
+<!--                                app:layout_constraintEnd_toEndOf="@id/circle7"-->
+<!--                                app:layout_constraintLeft_toRightOf="@id/circle7"-->
 
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/circle7"
-                                android:layout_width="56dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/imm"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+<!--                                />-->
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                android:id="@+id/circle7"-->
+<!--                                android:layout_width="56dp"-->
+<!--                                android:layout_height="56dp"-->
+<!--                                android:src="@drawable/imm"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="center"                            >
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/star"
-                                app:layout_constraintBottom_toBottomOf="@id/circle8"
-                                app:layout_constraintEnd_toEndOf="@id/circle8"
-                                app:layout_constraintLeft_toRightOf="@id/circle8"
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:layout_gravity="center"                            >-->
 
-                                />
+<!--                            <ImageView-->
+<!--                                android:layout_width="20dp"-->
+<!--                                android:layout_height="20dp"-->
+<!--                                android:src="@drawable/star"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/circle8"-->
+<!--                                app:layout_constraintEnd_toEndOf="@id/circle8"-->
+<!--                                app:layout_constraintLeft_toRightOf="@id/circle8"-->
 
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/circle8"
-                                android:layout_width="56dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/imm"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+<!--                                />-->
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                android:id="@+id/circle8"-->
+<!--                                android:layout_width="56dp"-->
+<!--                                android:layout_height="56dp"-->
+<!--                                android:src="@drawable/imm"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="center"                            >
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/star"
-                                app:layout_constraintBottom_toBottomOf="@id/circle9"
-                                app:layout_constraintEnd_toEndOf="@id/circle9"
-                                app:layout_constraintLeft_toRightOf="@id/circle9"
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:layout_gravity="center"                            >-->
 
-                                app:layout_constraintStart_toStartOf="parent" />
+<!--                            <ImageView-->
+<!--                                android:layout_width="20dp"-->
+<!--                                android:layout_height="20dp"-->
+<!--                                android:src="@drawable/star"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/circle9"-->
+<!--                                app:layout_constraintEnd_toEndOf="@id/circle9"-->
+<!--                                app:layout_constraintLeft_toRightOf="@id/circle9"-->
+<!--                                />-->
 
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/circle9"
-                                android:layout_width="56dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/imm"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+<!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                android:id="@+id/circle9"-->
+<!--                                android:layout_width="56dp"-->
+<!--                                android:layout_height="56dp"-->
+<!--                                android:src="@drawable/imm"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="center"                            >
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:layout_gravity="center"                            >-->
 
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/star"
-                                app:layout_constraintBottom_toBottomOf="@id/circle10"
-                                app:layout_constraintEnd_toEndOf="@id/circle10"
-                                app:layout_constraintLeft_toRightOf="@id/circle10"
+<!--                            <ImageView-->
+<!--                                android:layout_width="20dp"-->
+<!--                                android:layout_height="20dp"-->
+<!--                                android:src="@drawable/star"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/circle10"-->
+<!--                                app:layout_constraintEnd_toEndOf="@id/circle10"-->
+<!--                                app:layout_constraintLeft_toRightOf="@id/circle10"-->
 
-                                />
+<!--                                />-->
 
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/circle10"
-                                android:layout_width="56dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/imm"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+<!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                android:id="@+id/circle10"-->
+<!--                                android:layout_width="56dp"-->
+<!--                                android:layout_height="56dp"-->
+<!--                                android:src="@drawable/imm"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_columnWeight="1"
-                            android:layout_gravity="center"                            >
-
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/star"
-                                app:layout_constraintBottom_toBottomOf="@id/circle11"
-                                app:layout_constraintEnd_toEndOf="@id/circle11"
-                                app:layout_constraintLeft_toRightOf="@id/circle11"
-
-                                />
-
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/circle11"
-                                android:layout_width="56dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/imm"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
 
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:layout_gravity="center"                            >-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="20dp"-->
+<!--                                android:layout_height="20dp"-->
+<!--                                android:src="@drawable/star"-->
+<!--                                app:layout_constraintBottom_toBottomOf="@id/circle11"-->
+<!--                                app:layout_constraintEnd_toEndOf="@id/circle11"-->
+<!--                                app:layout_constraintLeft_toRightOf="@id/circle11"-->
+
+<!--                                />-->
+
+<!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                android:id="@+id/circle11"-->
+<!--                                android:layout_width="56dp"-->
+<!--                                android:layout_height="56dp"-->
+<!--                                android:src="@drawable/imm"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
 
-                    </GridLayout>
+
+
+
+<!--                    </GridLayout>-->
 
 
                     <TextView
+                        android:id="@+id/logoextend"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="⌄ 240 more"
@@ -653,6 +674,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/neon_templets2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -791,12 +813,6 @@
                         android:padding="5dp"
                         android:layout_marginTop="5dp"
                         />
-
-
-
-
-
-
 
                 </LinearLayout>
 
